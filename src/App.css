@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@keyframes colorChange {
+  0% {
+    color: rgba(255, 103, 103);
+  }
+  10%{
+    color: #ff6767ed;
+  }
+  20% {
+    color: #ff6767e5;
+  }
+  30%{
+    color: #ff6767d0;
+  }
+  40%{
+    color: #ff6767c2;
+  }
+  50%{
+    color: #ff6767b0;
+  }
+  60%{
+    color: rgba(255, 103, 103, 0.568);
+  }
+  70%{
+    color: rgba(255, 103, 103, 0.466);
+  }
+  80%{
+    color: rgba(255, 103, 103, 0.336);
+  }
+  90%{
+    color: rgba(255, 103, 103, 0.235);
+  }
+  100% {
+    color: rgba(255, 103, 103, 0.126);
+  }
+}
+
+* {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #9f9b9381;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.App {
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 0.5rem;
+  font-size: 1.75rem;
+  animation: colorChange 1s infinite alternate;
+}
+
+.TodoWrapper {
+  background: #efbe7f79;
+  margin-top: 5rem;
+  padding: 2rem;
+  border-radius: 20px;
+  border: 10px solid white;
+  box-shadow: 12px 12px rgba(145, 145, 145, 0.539)
+}
+
+.TodoForm {
+  width: 100%;
+}
+
+.todo-input {
+  outline: none;
+  background: none;
+  border: 2px solid #13650dc1;
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  width: 300px;
+  color: #fff;
+}
+
+.todo-input::placeholder {
+  color: #ffffff4d;
+}
+
+.todo-input:focus {
+  outline: none;
+  background: #e6e8695d;
+}
+
+.todo-btn {
+  background: #13650dc1;
+  color: #fff;
+  border: none;
+  border-radius: 15px;
+  padding: 0.55rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.todo-btn:hover {
+  background-color: #e7e95f;
+  color: #ff6767;
+  border-radius: 20px;
+}
+
+.Todo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #e6e869c9;
+  color: #ff6767b9;
+  padding: 0.75rem 1rem;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  transform: perspective(1000px) rotateX(25deg);
+  transition: transform 0.2s ease-in-out;
+}
+
+.Todo:hover {
+  transform: perspective(1000px) rotateX(0);
+  background-color: #e7e95f;
+  color: #ff6767;
+}
+
+.fa-trash {
+  margin-left: 0.75rem;
+}
+
+.completed {
+  color: #927373af;
+  text-decoration: line-through;
+}
+ 
